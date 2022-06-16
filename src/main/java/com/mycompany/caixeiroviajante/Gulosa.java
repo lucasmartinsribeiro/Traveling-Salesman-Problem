@@ -39,13 +39,15 @@ public class Gulosa {
     public void busca(Vertice vertice){
         Vertice cidadeAtual = vertice;
         
-        System.out.println("\nCidade atual: " + cidadeAtual.getNome_da_cidade() + "-" + cidadeAtual.getDistancia());
+        System.out.println("\nCidade atual: " + cidadeAtual.getNome_da_cidade() + " - " + cidadeAtual.getDistancia());
         
         if(cidadeAtual.getDistancia() != 0){
             System.out.println("\nAdjacentes:");
             
             for(int i = 0; i < cidadeAtual.getAdjacente().size(); i++){
-                System.out.println("\n" + cidadeAtual.getAdjacente().get(i).getVertice().getNome_da_cidade() + "-" + cidadeAtual.getAdjacente().get(i).getVertice().getDistancia());
+                if(!cidadeAtual.getAdjacente().get(i).getVertice().getVisitado()){
+                    System.out.println("\n" + i + " - " + cidadeAtual.getAdjacente().get(i).getVertice().getNome_da_cidade() + " - " + cidadeAtual.getAdjacente().get(i).getVertice().getDistancia());
+                }
             }
             
             System.out.println("\n-------------------");
@@ -54,7 +56,7 @@ public class Gulosa {
         if(cidadeAtual.getDistancia() == 0){
             System.out.println("\n Busca realizada com sucesso!");
             this.status = true;
-        } else {
+        }else {
             for(int i = 0;(i < cidadeAtual.getAdjacente().size()) && (this.status != true); i++){
                 if(!cidadeAtual.getAdjacente().get(i).getVertice().getVisitado()){
                     cidadeAtual = cidadeAtual.getAdjacente().get(i).getVertice();
