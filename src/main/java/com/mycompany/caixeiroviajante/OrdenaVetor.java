@@ -19,8 +19,9 @@ public class OrdenaVetor {
    
     public static ArrayList<Adjacentes> insertionSort( ArrayList<Adjacentes> adjacentes) {
          int j;
-         Adjacentes key;
          int i;
+         Adjacentes key;
+         
          for (j = 1; j < adjacentes.size(); j++){
              key = adjacentes.get(j);
             for (i = j - 1; (i >= 0) && (adjacentes.get(i).getVertice().getDistancia() > key.getVertice().getDistancia()); i--){

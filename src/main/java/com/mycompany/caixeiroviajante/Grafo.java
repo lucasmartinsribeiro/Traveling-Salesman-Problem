@@ -44,49 +44,67 @@ public class Grafo {
             arad.adicionaAdjacente(new Adjacentes(zerind, 75));
             arad.adicionaAdjacente(new Adjacentes(sibiu, 140));
             arad.adicionaAdjacente(new Adjacentes(timisoara, 118));
+            
+            bucharest.adicionaAdjacente(new Adjacentes(urziceni, 85));
+            bucharest.adicionaAdjacente(new Adjacentes(giurgiu, 90));
+            bucharest.adicionaAdjacente(new Adjacentes(fagaras, 211));
+            bucharest.adicionaAdjacente(new Adjacentes(pitest, 101));
+            
+            craiova.adicionaAdjacente(new Adjacentes(dobreta, 120));
+            craiova.adicionaAdjacente(new Adjacentes(pitest, 138));
+            craiova.adicionaAdjacente(new Adjacentes(rimnicu, 146));
+            
+            dobreta.adicionaAdjacente(new Adjacentes(mehadia, 75));
+            dobreta.adicionaAdjacente(new Adjacentes(craiova, 120));
+            
+            eforie.adicionaAdjacente(new Adjacentes(hirsova, 86));
+            
+            fagaras.adicionaAdjacente(new Adjacentes(sibiu, 99));
+            fagaras.adicionaAdjacente(new Adjacentes(bucharest, 211));
 
-            zerind.adicionaAdjacente(new Adjacentes(arad, 75));
-            zerind.adicionaAdjacente(new Adjacentes(oradea, 71));
+            giurgiu.adicionaAdjacente(new Adjacentes(bucharest, 90));
+            
+            hirsova.adicionaAdjacente(new Adjacentes(eforie, 86));
+            hirsova.adicionaAdjacente(new Adjacentes(urziceni, 98));
 
+            iasi.adicionaAdjacente(new Adjacentes(neamt, 87));
+            iasi.adicionaAdjacente(new Adjacentes(vaslui, 92));
+            
+            lugoj.adicionaAdjacente(new Adjacentes(timisoara, 111));
+            lugoj.adicionaAdjacente(new Adjacentes(mehadia, 70));
+            
+            mehadia.adicionaAdjacente(new Adjacentes(lugoj, 70));
+            mehadia.adicionaAdjacente(new Adjacentes(dobreta, 75));
+            
+            neamt.adicionaAdjacente(new Adjacentes(iasi, 87));
+            
             oradea.adicionaAdjacente(new Adjacentes(zerind, 71));
             oradea.adicionaAdjacente(new Adjacentes(sibiu, 151));
-
+            
+            pitest.adicionaAdjacente(new Adjacentes(craiova, 138));
+            pitest.adicionaAdjacente(new Adjacentes(rimnicu, 97));
+            pitest.adicionaAdjacente(new Adjacentes(bucharest, 101));
+            
+            rimnicu.adicionaAdjacente(new Adjacentes(pitest, 97));
+            rimnicu.adicionaAdjacente(new Adjacentes(sibiu, 80));
+            rimnicu.adicionaAdjacente(new Adjacentes(craiova, 146));
+            
             sibiu.adicionaAdjacente(new Adjacentes(oradea, 151));
             sibiu.adicionaAdjacente(new Adjacentes(arad, 140));
             sibiu.adicionaAdjacente(new Adjacentes(fagaras, 99));
             sibiu.adicionaAdjacente(new Adjacentes(rimnicu, 80));
-
+            
             timisoara.adicionaAdjacente(new Adjacentes(arad, 118));
             timisoara.adicionaAdjacente(new Adjacentes(lugoj, 111));
+            
+            urziceni.adicionaAdjacente(new Adjacentes(bucharest, 85));
+            urziceni.adicionaAdjacente(new Adjacentes(hirsova, 98));
+            urziceni.adicionaAdjacente(new Adjacentes(vaslui, 142));
+            
+            vaslui.adicionaAdjacente(new Adjacentes(iasi, 92));
+            vaslui.adicionaAdjacente(new Adjacentes(urziceni, 142));
 
-            lugoj.adicionaAdjacente(new Adjacentes(timisoara, 111));
-            lugoj.adicionaAdjacente(new Adjacentes(mehadia, 70));
-
-            mehadia.adicionaAdjacente(new Adjacentes(lugoj, 70));
-            mehadia.adicionaAdjacente(new Adjacentes(dobreta, 75));
-
-            dobreta.adicionaAdjacente(new Adjacentes(mehadia, 75));
-            dobreta.adicionaAdjacente(new Adjacentes(craiova, 120));
-
-            craiova.adicionaAdjacente(new Adjacentes(dobreta, 120));
-            craiova.adicionaAdjacente(new Adjacentes(pitest, 138));
-            craiova.adicionaAdjacente(new Adjacentes(rimnicu, 146));
-
-            pitest.adicionaAdjacente(new Adjacentes(craiova, 138));
-            pitest.adicionaAdjacente(new Adjacentes(rimnicu, 97));
-            pitest.adicionaAdjacente(new Adjacentes(bucharest, 101));
-
-            rimnicu.adicionaAdjacente(new Adjacentes(pitest, 97));
-            rimnicu.adicionaAdjacente(new Adjacentes(sibiu, 80));
-            rimnicu.adicionaAdjacente(new Adjacentes(craiova, 146));
-
-            fagaras.adicionaAdjacente(new Adjacentes(sibiu, 99));
-            fagaras.adicionaAdjacente(new Adjacentes(bucharest, 211));
-
-            bucharest.adicionaAdjacente(new Adjacentes(giurgiu, 90));
-            bucharest.adicionaAdjacente(new Adjacentes(fagaras, 211));
-            bucharest.adicionaAdjacente(new Adjacentes(pitest, 101));
-
-            giurgiu.adicionaAdjacente(new Adjacentes(bucharest, 90));
+            zerind.adicionaAdjacente(new Adjacentes(arad, 75));
+            zerind.adicionaAdjacente(new Adjacentes(oradea, 71));
     }
 }
