@@ -23,10 +23,12 @@ public class OrdenaVetor {
          Adjacentes key;
          
          for (j = 1; j < adjacentes.size(); j++){
-             key = adjacentes.get(j);
+            key = adjacentes.get(j);
+            
             for (i = j - 1; (i >= 0) && (adjacentes.get(i).getVertice().getDistancia() > key.getVertice().getDistancia()); i--){
                 adjacentes.set((i+1),adjacentes.get(i));
             }
+            
             adjacentes.set((i+1),key);
          }
          return adjacentes;

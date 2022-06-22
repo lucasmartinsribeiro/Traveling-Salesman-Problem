@@ -38,15 +38,19 @@ public class Gulosa {
     
     public void busca(Vertice vertice){
         Vertice cidadeAtual = vertice;
+        cidadeAtual.setVisitado(true);
         
         System.out.println("\nCidade atual: " + cidadeAtual.getNome_da_cidade() + " - " + cidadeAtual.getDistancia());
         
         if(cidadeAtual.getDistancia() != 0){
             System.out.println("\nAdjacentes:");
             
+            int cont = -1;
+            
             for(int i = 0; i < cidadeAtual.getAdjacente().size(); i++){
                 if(!cidadeAtual.getAdjacente().get(i).getVertice().getVisitado()){
-                    System.out.println("\n" + i + " - " + cidadeAtual.getAdjacente().get(i).getVertice().getNome_da_cidade() + " - " + cidadeAtual.getAdjacente().get(i).getVertice().getDistancia());
+                    cont++;
+                    System.out.println("\n" + cont + " - " + cidadeAtual.getAdjacente().get(i).getVertice().getNome_da_cidade() + " - " + cidadeAtual.getAdjacente().get(i).getVertice().getDistancia());
                 }
             }
             
